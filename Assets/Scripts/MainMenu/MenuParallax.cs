@@ -18,12 +18,13 @@ public class MenuParallax : MonoBehaviour
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        if (mainCamera == null)
-            mainCamera = Camera.main;
+        FindCamera();
     }
 
     private void Start()
     {
+        FindCamera();
+
         if (rectTransform != null)
         {
             Canvas.ForceUpdateCanvases();
@@ -35,12 +36,22 @@ public class MenuParallax : MonoBehaviour
         }
     }
 
+    private void FindCamera()
+    {
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+            if (mainCamera == null)
+                mainCamera = FindAnyObjectByType<Camera>();
+        }
+    }
+
     private void Update()
     {
         if (Mouse.current == null) return;
         if (mainCamera == null)
         {
-            mainCamera = Camera.main;
+            FindCamera();
             if (mainCamera == null) return;
         }
 

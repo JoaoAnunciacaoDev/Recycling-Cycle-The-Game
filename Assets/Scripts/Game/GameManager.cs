@@ -76,13 +76,29 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (SceneFlowManager.Instance != null)
+        {
+            SceneFlowManager.Instance.RestartGame();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void MenuGame()
     {
         StopAllCoroutines();
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+
+        if (SceneFlowManager.Instance != null)
+        {
+            SceneFlowManager.Instance.LoadMainMenu();
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

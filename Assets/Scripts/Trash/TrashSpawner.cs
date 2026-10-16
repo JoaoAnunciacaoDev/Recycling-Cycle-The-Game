@@ -16,6 +16,21 @@ public class TrashSpawner : MonoBehaviour
 
     private float timer;
 
+    private void Awake()
+    {
+        FindCamera();
+    }
+
+    private void FindCamera()
+    {
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+            if (mainCamera == null)
+                mainCamera = FindFirstObjectByType<Camera>();
+        }
+    }
+
     private void Update()
     {
         timer += Time.deltaTime;
@@ -29,6 +44,9 @@ public class TrashSpawner : MonoBehaviour
 
     private void SpawnTrash()
     {
+        FindCamera();
+        if (mainCamera == null) return;
+
         float halfWidth = mainCamera.orthographicSize * mainCamera.aspect;
         float randomX = Random.Range(-halfWidth + horizontalPadding, halfWidth - horizontalPadding);
 
@@ -38,10 +56,11 @@ public class TrashSpawner : MonoBehaviour
             transform.position.z
         );
 
-        Trash trash =Instantiate(
+        Trash trash = Instantiate(
             trashPrefab,
             spawnPosition,
-            Quaternion.identity
+            Quaternion.identity,
+            transform
         );
 
         TrashType randomType = GetRandomTrashType();
