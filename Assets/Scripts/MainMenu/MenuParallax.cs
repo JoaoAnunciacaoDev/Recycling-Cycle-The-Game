@@ -12,7 +12,8 @@ public class MenuParallax : MonoBehaviour
     private RectTransform rectTransform;
     private Vector2 initialAnchoredPosition;
     private Vector3 initialWorldPosition;
-    private Vector3 velocity;
+    private Vector2 uiVelocity;
+    private Vector3 worldVelocity;
 
     private void Awake()
     {
@@ -53,7 +54,7 @@ public class MenuParallax : MonoBehaviour
             rectTransform.anchoredPosition = Vector2.SmoothDamp(
                 rectTransform.anchoredPosition,
                 targetPos,
-                ref velocity,
+                ref uiVelocity,
                 smoothTime,
                 Mathf.Infinity,
                 Time.unscaledDeltaTime
@@ -65,7 +66,7 @@ public class MenuParallax : MonoBehaviour
             transform.position = Vector3.SmoothDamp(
                 transform.position,
                 targetPos,
-                ref velocity,
+                ref worldVelocity,
                 smoothTime,
                 Mathf.Infinity,
                 Time.unscaledDeltaTime
