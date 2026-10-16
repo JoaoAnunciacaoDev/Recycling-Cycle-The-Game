@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 97cc2b1bd3bde5c4ca673603fc29bdc8
+guid: bf7419f15b3220548af095602acfdbcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2289762367906510726
-    second: Start_en_0
+      213: 449599256478375648
+    second: yellowButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Start_en_0
+      name: yellowButton_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 687ff1fedbed6cf10800000000000000
-      internalID: 2289762367906510726
+      spriteID: 0ee5ca5442c4d3600800000000000000
+      internalID: 449599256478375648
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Start_en_0: 2289762367906510726
+      yellowButton_0: 449599256478375648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

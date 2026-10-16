@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc1ac73b79d800a40854844456a6a5c6
+guid: 4e61bf18689eb4342a403c1ec319d23c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3563743859810286729
-    second: Exit_en_0
+      213: -8557466468630148873
+    second: redButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Exit_en_0
+      name: redButton_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 773478d47d90b8ec0800000000000000
-      internalID: -3563743859810286729
+      spriteID: 7f8cbff0695cd3980800000000000000
+      internalID: -8557466468630148873
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Exit_en_0: -3563743859810286729
+      redButton_0: -8557466468630148873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

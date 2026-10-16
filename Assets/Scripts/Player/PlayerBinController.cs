@@ -13,7 +13,7 @@ public class PlayerBinController : MonoBehaviour
     [SerializeField] private RectTransform touchBar;
     [SerializeField] private RectTransform topBar;
 
-    [Header("Tilt / Inclinação")]
+    [Header("Inclinação")]
     [SerializeField] private float maxTiltAngle = 15f;
     [SerializeField] private float tiltSensitivity = 8f;
     [SerializeField] private float tiltSmoothSpeed = 12f;
