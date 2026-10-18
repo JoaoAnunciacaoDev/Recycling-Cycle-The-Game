@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         currentScore += score;
+        SFXManager.Instance?.PlaySFX("coleta");
     }
 
     public void TakeDamage(int damage)
@@ -40,7 +41,16 @@ public class GameManager : MonoBehaviour
         currentLives = Mathf.Max(currentLives - damage, 0);
 
         if (currentLives == 0)
+        {
+            ScreenShake.Instance?.Shake(0.6f);
+            SFXManager.Instance?.PlaySFX("erro");
             GameOver();
+        }
+        else
+        {
+            ScreenShake.Instance?.Shake(0.35f);
+            SFXManager.Instance?.PlaySFX("dano");
+        }
     }
 
     private void GameOver()
@@ -48,9 +58,20 @@ public class GameManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(gameTimer.ElapsedTime / 60f);
         int seconds = Mathf.FloorToInt(gameTimer.ElapsedTime % 60f);
 
-        finalTimeLabel.text = $"{minutes:00}:{seconds:00}";
-        finalScoreLabel.text = $"Score: {currentScore}";
         gameOverPanel.gameObject.SetActive(true);
+
+        string timePrefix = LocalizationManager.Instance != null ? LocalizationManager.Instance.GetText("game.time") : "Tempo";
+        string scorePrefix = LocalizationManager.Instance != null ? LocalizationManager.Instance.GetText("game.score") : "Pontos";
+
+        if (finalTimeLabel != null)
+        {
+            finalTimeLabel.text = $"{timePrefix}: {minutes:00}:{seconds:00}";
+        }
+
+        if (finalScoreLabel != null)
+        {
+            finalScoreLabel.text = $"{scorePrefix}: {currentScore}";
+        }
 
         Time.timeScale = 0f;
         StartCoroutine(FadeInGameOverRoutine());

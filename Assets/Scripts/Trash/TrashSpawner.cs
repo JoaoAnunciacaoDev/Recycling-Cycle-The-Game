@@ -27,7 +27,7 @@ public class TrashSpawner : MonoBehaviour
         {
             mainCamera = Camera.main;
             if (mainCamera == null)
-                mainCamera = FindFirstObjectByType<Camera>();
+                mainCamera = FindAnyObjectByType<Camera>();
         }
     }
 

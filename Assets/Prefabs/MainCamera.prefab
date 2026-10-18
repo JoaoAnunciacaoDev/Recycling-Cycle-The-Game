@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5587027356606120650}
   - component: {fileID: 493938277394538334}
   - component: {fileID: 595506598652332616}
+  - component: {fileID: 4931525932198258572}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -43,8 +44,8 @@ Camera:
   m_GameObject: {fileID: 2378897958444955073}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -137,3 +138,17 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &4931525932198258572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378897958444955073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21347ebd7a99e3b4bafba7baa6ee2832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
+  shakeFade: 9
+  defaultStrength: 0.35

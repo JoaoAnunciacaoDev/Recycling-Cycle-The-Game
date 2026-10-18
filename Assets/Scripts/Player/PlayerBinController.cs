@@ -40,7 +40,7 @@ public class PlayerBinController : MonoBehaviour
         {
             mainCamera = Camera.main;
             if (mainCamera == null)
-                mainCamera = FindFirstObjectByType<Camera>();
+                mainCamera = FindAnyObjectByType<Camera>();
         }
         if (sr == null) sr = GetComponent<SpriteRenderer>();
         if (collider2D == null) collider2D = GetComponent<Collider2D>();
