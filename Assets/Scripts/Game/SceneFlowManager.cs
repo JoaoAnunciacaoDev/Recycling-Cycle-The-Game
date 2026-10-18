@@ -27,6 +27,14 @@ public class SceneFlowManager : MonoBehaviour
 
         Instance = this;
         EnsureFadeOverlay();
+#if UNITY_STANDALONE && !UNITY_EDITOR
+        if (Screen.width > Screen.height)
+        {
+            int targetHeight = Mathf.Min(Display.main.systemHeight - 100, 960);
+            int targetWidth = Mathf.RoundToInt(targetHeight * (9f / 16f));
+            Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.Windowed);
+        }
+#endif
     }
 
     private void Start()

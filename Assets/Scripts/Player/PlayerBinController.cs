@@ -180,7 +180,8 @@ public class PlayerBinController : MonoBehaviour
     private Vector3 ClampToBounds(Vector3 position)
     {
         float halfHeight = mainCamera.orthographicSize;
-        float halfWidth = halfHeight * mainCamera.aspect;
+        float gameAreaHalfWidth = 2.8125f;
+        float halfWidth = Mathf.Min(halfHeight * mainCamera.aspect, gameAreaHalfWidth);
 
         float halfObjectWidth = collider2D.bounds.extents.x;
         float halfObjectHeight = collider2D.bounds.extents.y;

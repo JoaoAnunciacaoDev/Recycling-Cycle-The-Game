@@ -47,7 +47,8 @@ public class TrashSpawner : MonoBehaviour
         FindCamera();
         if (mainCamera == null) return;
 
-        float halfWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        float gameAreaHalfWidth = 2.8125f;
+        float halfWidth = Mathf.Min(mainCamera.orthographicSize * mainCamera.aspect, gameAreaHalfWidth);
         float randomX = Random.Range(-halfWidth + horizontalPadding, halfWidth - horizontalPadding);
 
         Vector3 spawnPosition = new Vector3(

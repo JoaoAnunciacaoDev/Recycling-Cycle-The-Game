@@ -43,7 +43,7 @@ public class LocalizationManager : MonoBehaviour
         AddTranslation("ui.options", "Opcoes", "Options");
         AddTranslation("ui.quit", "Sair", "Quit");
         AddTranslation("ui.back", "Voltar", "Back");
-        AddTranslation("ui.song", "Música", "Music");
+        AddTranslation("ui.song", "Musica", "Music");
         AddTranslation("ui.sfx", "Efeitos", "SFX");
         AddTranslation("ui.language", "Idioma: PT", "Language: EN");
         AddTranslation("ui.gameover", "Fim de Jogo", "Game Over");
